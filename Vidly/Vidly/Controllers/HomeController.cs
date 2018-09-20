@@ -10,6 +10,7 @@ namespace Vidly.Controllers
     {
         public ActionResult Index()
         {
+            //Code has been edited from github
             return View();
         }
 
