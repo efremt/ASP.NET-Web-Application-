@@ -1,0 +1,32 @@
+﻿@model List<Vidly.Models.Customer>
+@{
+    ViewBag.Title = "DisplayCustomers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Customers</h1>
+@if (Model.Count > 0)
+{   
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cust in Model)
+            {
+                var URL =  $"../Customers/DisplayCustomer/{cust.Id}" ;
+                <tr class="table-primary">
+                    <th scope="row">
+                        <a href=@URL>@cust.Name</a>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <text>We don't have any customers yet.</text>
+}

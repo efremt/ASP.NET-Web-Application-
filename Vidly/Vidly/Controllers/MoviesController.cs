@@ -72,5 +72,21 @@ namespace Vidly.Controllers
         {
             return Content($"Release Year Year: {year}/{month}");
         }
+        public ActionResult displayMovies()
+        {
+            Movie movie1 = new Movie() { Name = "Shirek" };
+            Movie movie2 = new Movie() { Name = "A Team" };
+
+            List<Movie> listMovie = new List<Movie>()
+            {
+                movie1,
+                movie2
+            };
+
+            return View(listMovie);
+
+        
+        }
+
     }
 }

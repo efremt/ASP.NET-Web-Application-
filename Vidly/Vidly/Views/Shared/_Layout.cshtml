@@ -1,5 +1,4 @@
-﻿@model  Vidly.Models.ViewModel.RandomMovieViewModel
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,12 +8,12 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @Html.Partial("_NavBar",Model.Movie) @*Call a Partial view by passing a model*@
+    @Html.Partial("_NavBar") @*Call a Partial view by passing a model*@
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Vidly</p>
         </footer>
     </div>
 
